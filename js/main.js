@@ -40,3 +40,30 @@ document.addEventListener('click', (e) => {
     options.classList.remove('show');
   }
 });
+
+const likeBtn = document.querySelector('.like-btn');
+likeBtn.addEventListener("click", () => {
+  likeBtn.classList.toggle("active");
+});
+
+try {
+  const settingsBtn = document.querySelector('.settings-btn');
+  const options = settingsBtn.querySelectorAll('.share-options span');
+  const currentValue = settingsBtn.querySelector('span'); // 720 yozilgan span
+
+  // Button bosilganda active toggle
+  settingsBtn.addEventListener('click', (e) => {
+    settingsBtn.classList.toggle('active');
+  });
+
+  options.forEach(option => {
+    option.addEventListener('click', (e) => {
+      e.stopPropagation();
+
+      currentValue.textContent = option.textContent; // replace yo'q
+      settingsBtn.classList.remove('active');
+    });
+  });
+} catch (error) {
+
+}

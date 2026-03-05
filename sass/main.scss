@@ -120,12 +120,11 @@ body {
     margin-top: 6px;
     left: 0;
     width: 100%;
-    padding: 12px;
     border-radius: 6px;
     background: #2D2D2D;
     display: none;
+    overflow: hidden;
     flex-direction: column;
-    gap: 12px;
 
     &.show {
       display: flex;
@@ -134,11 +133,16 @@ body {
     .search-option {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 16px;
       color: #EBEBEB;
-      padding: 10px 0;
+      height: 56px;
+      padding: 10px 12px;
       cursor: pointer;
+      transition: all .2s linear;
 
+      &:hover {
+        background-color: #414141;
+      }
 
 
       img {
@@ -218,6 +222,14 @@ body {
       }
     }
 
+    &:active {
+      color: #D7418C;
+
+      path {
+        stroke: #D7418C !important;
+      }
+    }
+
     &.active {
       color: #EBEBEB;
 
@@ -273,6 +285,14 @@ body {
     width: 100%;
     height: 100%;
     color: #EBEBEB;
+
+    .content-title {
+      transition: all .2s linear;
+    }
+
+    &:hover .content-title {
+      color: #FF69B4;
+    }
   }
 
   .category-box {
@@ -309,14 +329,17 @@ body {
     .content {
       &-img {
         width: 100%;
-        height: 314px;
+        aspect-ratio: 7 / 9; // Konteyner proporsiyasi qat'iy 7:9
         border-radius: 6px;
         overflow: hidden;
+        position: relative; // Agar ichida absolut elementlar bo'lsa
 
         .img {
-          object-fit: cover;
+          display: block;
           width: 100%;
           height: 100%;
+          object-fit: cover; // Rasm endi cho'zilmaydi, balki konteynerni to'ldiradi
+          object-position: center; // Markazdan qirqadi
         }
 
         .rekad-card {
@@ -380,6 +403,7 @@ body {
       top: 0;
       z-index: -2;
       border-radius: inherit;
+
     }
 
     &::before {
@@ -552,6 +576,16 @@ body {
       padding: 12px;
       border-radius: 6px;
 
+      &:hover {
+        background-color: #fff;
+      }
+
+      &:active {
+        background-color: #CDCDCD;
+      }
+
+
+
       span {
         color: #9E9E9E;
         font-size: 11px;
@@ -708,10 +742,6 @@ body {
 
   .sidebar {
     display: none;
-  }
-
-  .right-sidebar .content-boxes .content-img {
-    height: 220px;
   }
 
   .right-sidebar .search-box {

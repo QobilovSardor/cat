@@ -450,12 +450,11 @@ body {
   margin-top: 6px;
   left: 0;
   width: 100%;
-  padding: 12px;
   border-radius: 6px;
   background: #2D2D2D;
   display: none;
+  overflow: hidden;
   flex-direction: column;
-  gap: 12px;
 }
 .search-box .search-options.show {
   display: flex;
@@ -463,10 +462,15 @@ body {
 .search-box .search-options .search-option {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   color: #EBEBEB;
-  padding: 10px 0;
+  height: 56px;
+  padding: 10px 12px;
   cursor: pointer;
+  transition: all 0.2s linear;
+}
+.search-box .search-options .search-option:hover {
+  background-color: #414141;
 }
 .search-box .search-options .search-option img {
   width: 24px;
@@ -534,6 +538,12 @@ body {
 .sidebar__link:hover path {
   stroke: #FF69B4 !important;
 }
+.sidebar__link:active {
+  color: #D7418C;
+}
+.sidebar__link:active path {
+  stroke: #D7418C !important;
+}
 .sidebar__link.active {
   color: #EBEBEB;
 }
@@ -580,6 +590,12 @@ body {
   height: 100%;
   color: #EBEBEB;
 }
+.right-sidebar .content-link .content-title {
+  transition: all 0.2s linear;
+}
+.right-sidebar .content-link:hover .content-title {
+  color: #FF69B4;
+}
 .right-sidebar .category-box {
   display: flex;
   gap: 6px;
@@ -607,14 +623,17 @@ body {
 }
 .right-sidebar .content-boxes .content-img {
   width: 100%;
-  height: 314px;
+  aspect-ratio: 7/9;
   border-radius: 6px;
   overflow: hidden;
+  position: relative;
 }
 .right-sidebar .content-boxes .content-img .img {
-  object-fit: cover;
+  display: block;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .right-sidebar .content-boxes .content-img .rekad-card {
   width: 100%;
@@ -808,6 +827,12 @@ body {
   padding: 12px;
   border-radius: 6px;
 }
+.categories-page .all-categories .item:hover {
+  background-color: #fff;
+}
+.categories-page .all-categories .item:active {
+  background-color: #CDCDCD;
+}
 .categories-page .all-categories .item span {
   color: #9E9E9E;
   font-size: 11px;
@@ -934,9 +959,6 @@ body {
   }
   .sidebar {
     display: none;
-  }
-  .right-sidebar .content-boxes .content-img {
-    height: 220px;
   }
   .right-sidebar .search-box {
     display: none;

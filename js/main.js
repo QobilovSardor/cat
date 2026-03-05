@@ -162,5 +162,4 @@ try {
     });
   });
 } catch (error) {
-
 }

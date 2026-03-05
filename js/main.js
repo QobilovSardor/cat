@@ -1,5 +1,17 @@
 
 try {
+  new Swiper('.shorts-swiper', {
+    direction: 'vertical',
+    slidesPerView: 1,
+    spaceBetween: 20,
+    speed: 500,
+    mousewheel: true,
+    keyboard: { enabled: true },
+    touchReleaseOnEdges: true,
+  });
+} catch (error) { }
+
+try {
   const categorySwiper = new Swiper('.category-swiper', {
     slidesPerView: 'auto',
     spaceBetween: 8,
@@ -72,21 +84,20 @@ try {
 
 }
 try {
-  const settingsBtn = document.querySelector('.settings-btn');
-  const options = settingsBtn.querySelectorAll('.share-options span');
-  const currentValue = settingsBtn.querySelector('span'); // 720 yozilgan span
+  document.querySelectorAll('.settings-btn').forEach(settingsBtn => {
+    const options = settingsBtn.querySelectorAll('.share-options span');
+    const currentValue = settingsBtn.querySelector('span');
 
-  // Button bosilganda active toggle
-  settingsBtn.addEventListener('click', (e) => {
-    settingsBtn.classList.toggle('active');
-  });
+    settingsBtn.addEventListener('click', (e) => {
+      settingsBtn.classList.toggle('active');
+    });
 
-  options.forEach(option => {
-    option.addEventListener('click', (e) => {
-      e.stopPropagation();
-
-      currentValue.textContent = option.textContent; // replace yo'q
-      settingsBtn.classList.remove('active');
+    options.forEach(option => {
+      option.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentValue.textContent = option.textContent;
+        settingsBtn.classList.remove('active');
+      });
     });
   });
 } catch (error) {
@@ -98,8 +109,8 @@ try {
 
 try {
   const ICONS = {
-    pause: 'images/icons/pause.svg',
-    play: 'images/icons/play2.svg',
+    pause: 'images/icons/play2.svg',
+    play: 'images/icons/pause.svg',
     mute: 'images/icons/mute.svg',
   };
 
@@ -119,8 +130,9 @@ try {
     const muteIcon = muteBtn.querySelector('.icon');
 
     let isPlaying = true;
-    let isMuted = false;
+    let isMuted = false; // ← HTML dagi default mute.svg ga mos
     let isAnimating = false;
+    muteIcon.innerHTML = `<img src="${ICONS.mute}" alt="mute">`;
 
     // ─── SHORTS CLICK → pause/play animate ───
     shorts.addEventListener('click', (e) => {
@@ -156,9 +168,11 @@ try {
       e.stopPropagation();
       isMuted = !isMuted;
 
-      muteIcon.innerHTML = isMuted
-        ? `<img src="${ICONS.mute}" alt="mute">`
-        : VOLUME_SVG;
+      if (isMuted) {
+        muteIcon.innerHTML = VOLUME_SVG; // muted → volume icon ko'rsat
+      } else {
+        muteIcon.innerHTML = `<img src="${ICONS.mute}" alt="mute">`; // unmuted → mute icon
+      }
     });
   });
 } catch (error) {

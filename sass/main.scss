@@ -434,7 +434,7 @@ body {
     justify-content: end;
     position: relative;
     z-index: 1;
-
+    flex: 1;
 
     .bg-video {
       position: absolute;
@@ -684,6 +684,7 @@ body {
   }
 
   .header {
+    flex-shrink: 0;
     display: flex !important;
     align-items: center;
     justify-content: space-between;
@@ -772,24 +773,14 @@ body {
   }
 
   .footer {
-    display: block;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 12px 38px 12px;
     border-top: 1px solid #2D2D2D;
-
-
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 999;
     background: #0F0F0F;
+    flex-shrink: 0;
+    padding: 12px 12px calc(38px + env(safe-area-inset-bottom, 0px)) 12px;
 
-    /* Gesture navigation bar ostida qolmasligi uchun */
-    padding: 12px 12px calc(38px + env(safe-area-inset-bottom)) 12px;
 
     &__link {
       max-width: 177px;
@@ -1060,4 +1051,39 @@ body {
   .feed-page .shorts {
     aspect-ratio: 9 / 15;
   }
+}
+
+
+.wrapper.feed-page {
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+}
+
+main#main {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+}
+
+.right-sidebar {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+// Swiper elementlari
+.shorts-swiper,
+.swiper-wrapper,
+.swiper-slide {
+  flex: 1;
+  height: 100% !important;
+}
+
+.shorts {
+  height: 100%;
+  aspect-ratio: 9 / 16;
+  max-width: 455px;
+  margin-inline: auto;
 }

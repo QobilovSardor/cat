@@ -1225,7 +1225,6 @@ main#main {
 .shorts-swiper,
 .swiper-wrapper,
 .swiper-slide {
-  flex: 1;
   height: 100% !important;
 }
 

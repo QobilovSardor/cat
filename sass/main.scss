@@ -416,8 +416,14 @@ body {
   }
 
   .shorts {
-    --chrome-height: 80px;
-    width: min(455px, 100vw - 24px, (100svh - var(--chrome-height)) * 9 / 16);
+    --header-height: 61px;
+    --footer-height: 68px;
+    --safe-area: env(safe-area-inset-bottom, 0px);
+    --chrome-height: calc(var(--header-height) + var(--footer-height) + var(--safe-area));
+
+    width: min(455px,
+        100vw - 24px,
+        (100svh - var(--chrome-height)) * 9 / 16);
     aspect-ratio: 9 / 16;
     margin-inline: auto;
     background: #2D2D2D;
@@ -428,7 +434,7 @@ body {
     justify-content: end;
     position: relative;
     z-index: 1;
-    height: 100%;
+
 
     .bg-video {
       position: absolute;
@@ -763,7 +769,6 @@ body {
 
   .wrapper {
     display: block;
-    padding-bottom: 68px;
   }
 
   .footer {

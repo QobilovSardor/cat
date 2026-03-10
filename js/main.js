@@ -181,3 +181,6 @@ try {
 document.querySelectorAll('.shorts .badge, .shorts .video-actions .box, .shorts .action-btn').forEach(el => {
   el.addEventListener('click', e => e.stopPropagation());
 });
+
+
+console.log(document.querySelector('.footer').getBoundingClientRect())

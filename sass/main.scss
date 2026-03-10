@@ -779,7 +779,8 @@ body {
     border-top: 1px solid #2D2D2D;
     background: #0F0F0F;
     flex-shrink: 0;
-    padding: 12px 12px calc(38px + env(safe-area-inset-bottom, 0px)) 12px;
+    // padding: 12px 12px calc(38px + env(safe-area-inset-bottom, 0px)) 12px;
+    padding: 12px 12px 80px 12px;
 
 
     &__link {

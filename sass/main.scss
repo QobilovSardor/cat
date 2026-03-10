@@ -987,7 +987,18 @@ body {
     height: calc(100vh - 70px - 70px);
   }
 
+  body {
+    padding-bottom: 0 !important;
+  }
+
+  .feed-body {
+    overflow: hidden;
+    height: 100%;
+  }
+
   .wrapper.feed-page {
+    min-height: unset;
+
     #main {
       padding-top: 0 !important;
       padding-bottom: 0 !important;

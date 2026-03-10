@@ -686,7 +686,6 @@ body {
 .feed-page .shorts {
   --chrome-height: 80px;
   width: min(455px, 100vw - 24px, (100svh - var(--chrome-height)) * 9 / 16);
-  height: auto;
   aspect-ratio: 9/16;
   margin-inline: auto;
   background: #2D2D2D;
@@ -977,6 +976,7 @@ body {
   }
   .wrapper {
     display: block;
+    padding-bottom: 68px;
   }
   .footer {
     display: block;
@@ -1066,7 +1066,6 @@ body {
   }
   .feed-page .shorts {
     max-width: 512px;
-    height: 100%;
   }
   .feed-page .shorts .video-actions {
     right: 12px;

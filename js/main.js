@@ -8,6 +8,14 @@ try {
     mousewheel: true,
     keyboard: { enabled: true },
     touchReleaseOnEdges: true,
+    breakpoints: {
+      768: {
+        spaceBetween: 20,
+      },
+      0: {
+        spaceBetween: 0,
+      },
+    }
   });
 } catch (error) { }
 

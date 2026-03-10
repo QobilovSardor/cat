@@ -1140,6 +1140,14 @@ body {
   }
   .wrapper.feed-page #main {
     padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .wrapper.feed-page #main .swiper,
+  .wrapper.feed-page #main .right-sidebar {
+    padding-bottom: 0 !important;
+  }
+  .wrapper.feed-page .shorts-swiper .swiper-slide {
+    margin-bottom: 0 !important;
   }
   .footer {
     padding: 12px;

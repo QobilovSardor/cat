@@ -990,6 +990,18 @@ body {
   .wrapper.feed-page {
     #main {
       padding-top: 0 !important;
+      padding-bottom: 0 !important;
+
+      .swiper,
+      .right-sidebar {
+        padding-bottom: 0 !important;
+      }
+    }
+
+    .shorts-swiper {
+      .swiper-slide {
+        margin-bottom: 0 !important;
+      }
     }
   }
 

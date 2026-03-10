@@ -1235,4 +1235,10 @@ main#main {
   margin-inline: auto;
 }
 
+.wrapper.feed-page {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
 /*# sourceMappingURL=main.css.map */

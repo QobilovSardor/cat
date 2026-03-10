@@ -1088,3 +1088,10 @@ main#main {
   max-width: 455px;
   margin-inline: auto;
 }
+
+
+.wrapper.feed-page {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}

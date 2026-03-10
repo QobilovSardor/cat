@@ -183,4 +183,6 @@ document.querySelectorAll('.shorts .badge, .shorts .video-actions .box, .shorts 
 });
 
 
-console.log(document.querySelector('.footer').getBoundingClientRect())
+// Consoleda tekshir:
+console.log(window.innerHeight)      // haqiqiy ko'rinadigan balandlik
+console.log(screen.height)           // ekran balandligi

@@ -1124,9 +1124,11 @@ body {
   }
   .wrapper.feed-page {
     height: 100dvh;
-    display: flex;
+    display: block;
     flex-direction: column;
-    padding-bottom: calc(69px + env(safe-area-inset-bottom, 34px));
+  }
+  .wrapper.feed-page #main {
+    height: calc(100dvh - 68px - 61px);
   }
 }
 @media (max-width: 768px) {
@@ -1135,6 +1137,9 @@ body {
   }
   #main {
     height: calc(100vh - 70px - 70px);
+  }
+  .wrapper.feed-page #main {
+    padding-top: 0 !important;
   }
   .footer {
     padding: 12px;

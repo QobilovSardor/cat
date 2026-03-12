@@ -1144,15 +1144,9 @@ body {
   .feed-page .shorts .video-actions .share-options {
     right: 55px;
   }
-}
-@media (hover: none) and (pointer: coarse) {
   .feed-body {
     overflow: hidden;
     height: 100dvh;
-  }
-  .feed-body .shorts {
-    max-width: calc(100% - 40px) !important;
-    padding-inline: 20px !important;
   }
 }
 @media (max-width: 768px) {
@@ -1343,6 +1337,12 @@ body {
     flex-direction: column;
     gap: 3px;
     align-items: start;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .feed-body .shorts {
+    max-width: calc(100% - 40px) !important;
+    padding-inline: 20px !important;
   }
 }
 

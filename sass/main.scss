@@ -995,11 +995,13 @@ body {
     height: calc(100% - 73px);
   }
 
-  .categories-body {
+  .categories-body,
+  .search-body {
     overflow: hidden;
     height: 100dvh;
 
-    .categories-page {
+    .categories-page,
+    .search-page {
       overflow: hidden;
       height: 100%;
     }

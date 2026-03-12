@@ -1143,15 +1143,20 @@ body {
   .media-search {
     height: calc(100% - 73px);
   }
-  .categories-body {
+  .categories-body,
+  .search-body {
     overflow: hidden;
     height: 100dvh;
   }
-  .categories-body .categories-page {
+  .categories-body .categories-page,
+  .categories-body .search-page,
+  .search-body .categories-page,
+  .search-body .search-page {
     overflow: hidden;
     height: 100%;
   }
-  .categories-body #main {
+  .categories-body #main,
+  .search-body #main {
     height: 100%;
     overflow-y: auto;
   }

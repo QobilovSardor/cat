@@ -426,7 +426,7 @@ body {
         (100svh - var(--chrome-height)) * 9 / 16);
     aspect-ratio: 9 / 16;
 
-    
+
     margin-inline: auto;
     background: #2D2D2D;
     padding: 12px;
@@ -696,7 +696,8 @@ body {
     max-width: 100%;
     width: 100%;
   }
-  .feed-page .shorts{
+
+  .feed-page .shorts {
     width: auto;
     max-width: fit-content !important;
   }
@@ -992,6 +993,20 @@ body {
 @media (max-width: 768px) {
   .media-search {
     height: calc(100% - 73px);
+  }
+
+  .categories-body {
+    overflow: hidden;
+    height: 100dvh;
+    .categories-page {
+      overflow: hidden;
+      height: 100%;
+    }
+    #main{
+      height: 100%;
+      overflow-y: auto;
+      
+    }
   }
 
   #main {

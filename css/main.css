@@ -1143,6 +1143,18 @@ body {
   .media-search {
     height: calc(100% - 73px);
   }
+  .categories-body {
+    overflow: hidden;
+    height: 100dvh;
+  }
+  .categories-body .categories-page {
+    overflow: hidden;
+    height: 100%;
+  }
+  .categories-body #main {
+    height: 100%;
+    overflow-y: auto;
+  }
   #main {
     height: calc(100vh - 70px - 70px);
   }

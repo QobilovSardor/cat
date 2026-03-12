@@ -416,17 +416,6 @@ body {
   }
 
   .shorts {
-    // --header-height: 61px;
-    // --footer-height: 68px;
-    // --safe-area: env(safe-area-inset-bottom, 0px);
-    // --chrome-height: calc(var(--header-height) + var(--footer-height) + var(--safe-area));
-
-    // width: min(455px,
-    //     100vw - 24px,
-    //     (100svh - var(--chrome-height)) * 9 / 16);
-    // aspect-ratio: 9 / 16;
-
-    // new
     --header-height: 61px;
     --footer-height: 68px;
     --safe-area: env(safe-area-inset-bottom, 0px);
@@ -437,7 +426,7 @@ body {
         (100svh - var(--chrome-height)) * 9 / 16);
     aspect-ratio: 9 / 16;
 
-
+    
     margin-inline: auto;
     background: #2D2D2D;
     padding: 12px;
@@ -707,8 +696,7 @@ body {
     max-width: 100%;
     width: 100%;
   }
-
-  .feed-page .shorts {
+  .feed-page .shorts{
     width: auto;
     max-width: fit-content !important;
   }
@@ -1204,14 +1192,5 @@ body {
     flex-direction: column;
     gap: 3px;
     align-items: start;
-  }
-}
-/* Faqat haqiqiy desktop (mouse bilan) */
-@media (hover: hover) and (pointer: fine) {
-  .shorts {
-      --header-height: 0px;
-      --footer-height: 0px;
-      --chrome-height: 0px;
-      width: min(455px, 100dvh * 9 / 16);
   }
 }

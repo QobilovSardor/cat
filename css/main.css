@@ -1340,7 +1340,7 @@ body {
     align-items: start;
   }
 }
-@media (max-width: 1024px) and (pointer: coarse) {
+@media (max-width: 1024px) and (pointer: coarse) and (hover: none) {
   .feed-body {
     overflow: hidden;
     height: 100dvh;

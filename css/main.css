@@ -1168,7 +1168,7 @@ body {
   }
   .feed-body .shorts {
     max-width: fit-content !important;
-    padding-inline: 0 !important;
+    padding-inline: 12px !important;
   }
   .media-search {
     height: calc(100% - 73px);

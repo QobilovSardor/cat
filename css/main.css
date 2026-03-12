@@ -910,16 +910,9 @@ body {
     overflow: hidden;
     height: 100dvh;
   }
-  .feed-body #main {
-    height: 100%;
-    overflow-y: auto;
-    padding-inline: 20px !important;
-    margin-inline: 20px !important;
-    width: calc(100% - 80px) !important;
-    max-width: calc(100% - 80px) !important;
-  }
-  .feed-body .shorts-swiper {
+  .feed-body .shorts {
     max-width: calc(100% - 40px) !important;
+    padding-inline: 20px !important;
   }
   .search-page .footer {
     position: fixed;

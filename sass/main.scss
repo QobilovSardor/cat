@@ -1206,3 +1206,12 @@ body {
     align-items: start;
   }
 }
+/* Faqat haqiqiy desktop (mouse bilan) */
+@media (hover: hover) and (pointer: fine) {
+  .shorts {
+      --header-height: 0px;
+      --footer-height: 0px;
+      --chrome-height: 0px;
+      width: min(455px, 100dvh * 9 / 16);
+  }
+}

@@ -50,8 +50,11 @@ swipers.forEach(swiperEl => {
       390: {
         slidesPerView: 2.5,
       },
+      500: {
+        slidesPerView: 3.5,
+      },
       768: {
-        slidesPerView: 3,
+        slidesPerView: 4.5,
       },
       1024: {
         slidesPerView: 4.5,

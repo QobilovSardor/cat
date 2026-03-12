@@ -1271,7 +1271,6 @@ body {
     width: 100%;
     max-width: 100% !important;
     height: 100%;
-    aspect-ratio: unset !important;
   }
   .feed-page .shorts {
     background: #000;

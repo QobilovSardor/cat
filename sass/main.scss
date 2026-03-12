@@ -680,14 +680,6 @@ body {
     padding-bottom: 0;
   }
 
-  .feed-body {
-    overflow: hidden;
-    height: 100dvh;
-    .shorts {
-      max-width: calc(100% - 40px) !important;
-      padding-inline: 20px !important;
-    }
-  }
 
   .search-page {
     .footer {
@@ -1001,6 +993,15 @@ body {
   }
 
 
+  .feed-body {
+    overflow: hidden;
+    height: 100dvh;
+
+    .shorts {
+      max-width: calc(100% - 40px) !important;
+      padding-inline: 20px !important;
+    }
+  }
 }
 
 @media (max-width: 768px) {

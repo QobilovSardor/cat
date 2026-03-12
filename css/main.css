@@ -1339,7 +1339,14 @@ body {
     align-items: start;
   }
 }
-@media (hover: none) and (pointer: coarse) {
+@media (max-width: 1024px) and (pointer: coarse) {
+  .feed-body {
+    overflow: hidden;
+    height: 100dvh;
+  }
+  .feed-body #main {
+    padding-top: 0 !important;
+  }
   .feed-body .shorts {
     max-width: calc(100% - 40px) !important;
     padding-inline: 20px !important;

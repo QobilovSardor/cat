@@ -682,6 +682,9 @@ body {
   .feed-body{
     overflow: hidden;
     height: 100dvh;
+    .shorts-swiper {
+padding-inline: 20px !important;
+    }
     #main{
       height: 100%;
       overflow-y: auto;

@@ -915,6 +915,14 @@ body {
     align-items: center;
     justify-content: space-between;
   }
+  .shorts-swiper {
+    max-width: 100%;
+    width: 100%;
+  }
+  .feed-page .shorts {
+    width: auto;
+    max-width: fit-content !important;
+  }
   .header-copyright {
     display: block;
   }

@@ -909,17 +909,17 @@ body {
   .feed-body {
     overflow: hidden;
     height: 100dvh;
-    padding-inline: 20px !important;
   }
-  .feed-body .shorts-swiper {
+  .feed-body #main {
+    height: 100%;
+    overflow-y: auto;
     padding-inline: 20px !important;
     margin-inline: 20px !important;
     width: calc(100% - 80px) !important;
     max-width: calc(100% - 80px) !important;
   }
-  .feed-body #main {
-    height: 100%;
-    overflow-y: auto;
+  .feed-body .shorts-swiper {
+    max-width: calc(100% - 40px) !important;
   }
   .search-page .footer {
     position: fixed;

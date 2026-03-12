@@ -683,18 +683,17 @@ body {
   .feed-body {
     overflow: hidden;
     height: 100dvh;
-    padding-inline: 20px !important;
 
-    .shorts-swiper {
+    #main {
+      height: 100%;
+      overflow-y: auto;
       padding-inline: 20px !important;
       margin-inline: 20px !important;
       width: calc(100% - 80px) !important;
       max-width: calc(100% - 80px) !important;
     }
-
-    #main {
-      height: 100%;
-      overflow-y: auto;
+    .shorts-swiper {
+      max-width: calc(100% - 40px) !important;
     }
   }
 

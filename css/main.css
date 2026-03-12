@@ -1155,6 +1155,9 @@ body {
     height: 100%;
     overflow-y: auto;
   }
+  .footer {
+    padding-bottom: 20px !important;
+  }
   #main {
     height: calc(100vh - 70px - 70px);
   }

@@ -998,15 +998,21 @@ body {
   .categories-body {
     overflow: hidden;
     height: 100dvh;
+
     .categories-page {
       overflow: hidden;
       height: 100%;
     }
-    #main{
+
+    #main {
       height: 100%;
       overflow-y: auto;
-      
+
     }
+  }
+
+  .footer {
+    padding-bottom: 20px !important;
   }
 
   #main {

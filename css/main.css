@@ -909,9 +909,11 @@ body {
   .feed-body {
     overflow: hidden;
     height: 100dvh;
+    padding-inline: 20px !important;
   }
   .feed-body .shorts-swiper {
     padding-inline: 20px !important;
+    margin-inline: 20px !important;
   }
   .feed-body #main {
     height: 100%;

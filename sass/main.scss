@@ -676,21 +676,26 @@ body {
 
 // media
 @media (max-width: 1024px) {
-  .feed-page .shorts-swiper .swiper-slide{
+  .feed-page .shorts-swiper .swiper-slide {
     padding-bottom: 0;
   }
-  .feed-body{
+
+  .feed-body {
     overflow: hidden;
     height: 100dvh;
+    padding-inline: 20px !important;
+
     .shorts-swiper {
-padding-inline: 20px !important;
+      padding-inline: 20px !important;
+      margin-inline: 20px !important;
     }
-    #main{
+
+    #main {
       height: 100%;
       overflow-y: auto;
     }
   }
-  
+
   .search-page {
     .footer {
       position: fixed;

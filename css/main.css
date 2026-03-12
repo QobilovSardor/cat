@@ -1139,6 +1139,7 @@ body {
     flex-direction: column;
   }
   .wrapper.feed-page #main {
+    padding-top: 0;
     height: calc(100dvh - 68px - 67px);
   }
   .feed-page .shorts .video-actions .share-options {
@@ -1339,7 +1340,7 @@ body {
     align-items: start;
   }
 }
-@media (max-width: 1024px) and (pointer: coarse) {
+@media (max-width: 600px) and (pointer: coarse) and (hover: none) {
   .feed-body {
     overflow: hidden;
     height: 100dvh;

@@ -988,6 +988,7 @@ body {
     // padding-bottom: calc(69px + env(safe-area-inset-bottom, 34px));
 
     #main {
+      padding-top: 0;
       height: calc(100dvh - 68px - 67px);
     }
   }
@@ -1253,10 +1254,11 @@ body {
   }
 }
 
-@media (max-width: 1024px) and (pointer: coarse) {
+@media (max-width: 600px) and (pointer: coarse) and (hover: none) {
   .feed-body {
     overflow: hidden;
     height: 100dvh;
+
     #main {
       padding-top: 0 !important;
     }

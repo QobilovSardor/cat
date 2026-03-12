@@ -903,6 +903,17 @@ body {
 }
 
 @media (max-width: 1024px) {
+  .feed-page .shorts-swiper .swiper-slide {
+    padding-bottom: 0;
+  }
+  .feed-body {
+    overflow: hidden;
+    height: 100dvh;
+  }
+  .feed-body #main {
+    height: 100%;
+    overflow-y: auto;
+  }
   .search-page .footer {
     position: fixed;
     bottom: 0;

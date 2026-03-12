@@ -676,6 +676,18 @@ body {
 
 // media
 @media (max-width: 1024px) {
+  .feed-page .shorts-swiper .swiper-slide{
+    padding-bottom: 0;
+  }
+  .feed-body{
+    overflow: hidden;
+    height: 100dvh;
+    #main{
+      height: 100%;
+      overflow-y: auto;
+    }
+  }
+  
   .search-page {
     .footer {
       position: fixed;

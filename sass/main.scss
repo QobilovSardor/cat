@@ -1012,6 +1012,20 @@ body {
     overflow: hidden;
     height: 100dvh;
   }
+
+  .feed-body {
+    overflow: hidden;
+    height: 100dvh;
+
+    #main {
+      padding-top: 0 !important;
+    }
+  }
+
+  .feed-body .shorts {
+    max-width: calc(100% - 40px) !important;
+    padding-inline: 20px !important;
+  }
 }
 
 
@@ -1251,21 +1265,5 @@ body {
     flex-direction: column;
     gap: 3px;
     align-items: start;
-  }
-}
-
-@media (max-width: 1024px) and (pointer: coarse) and (hover: none) {
-  .feed-body {
-    overflow: hidden;
-    height: 100dvh;
-
-    #main {
-      padding-top: 0 !important;
-    }
-  }
-
-  .feed-body .shorts {
-    max-width: calc(100% - 40px) !important;
-    padding-inline: 20px !important;
   }
 }

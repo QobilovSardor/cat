@@ -193,7 +193,36 @@ document.querySelectorAll('.shorts .badge, .shorts .video-actions .box, .shorts 
   el.addEventListener('click', e => e.stopPropagation());
 });
 
+try {
+  const shareBtns = document.querySelectorAll('.share-btn');
+  const modal = document.querySelector('.share-modal');
+  const copyBtn = modal.querySelector('.body button');
+  const input = modal.querySelector('input');
 
-// Consoleda tekshir:
-console.log(window.innerHeight)      // haqiqiy ko'rinadigan balandlik
-console.log(screen.height)           // ekran balandligi
+  // share tugmasi
+  shareBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      modal.classList.add('active');
+    });
+  });
+
+  // copy tugmasi
+  copyBtn.addEventListener('click', () => {
+    input.select();
+    navigator.clipboard.writeText(input.value);
+  });
+
+  // modal tashqarisini bosish
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('active');
+    }
+  });
+  const closeBtn = document.querySelector('.close-modal');
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+  });
+} catch (error) {
+
+}

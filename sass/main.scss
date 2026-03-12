@@ -1347,3 +1347,71 @@ body {
   background-image: url(../images/shorts.png);
   background-repeat: no-repeat;
 }
+
+.share-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 15, 15, 0.6);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+
+  .content {
+    max-width: 404px;
+    background: #2D2D2D;
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+
+    .head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+
+      h3 {
+        font-family: Poppins;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #fff;
+      }
+    }
+
+    .body {
+      display: flex;
+      gap: 6px;
+
+      input {
+        width: 100%;
+        height: 44px;
+        border: 1px solid #EBEBEB;
+        padding: 12px;
+        border-radius: 6px;
+        background: #2D2D2D;
+        color: #EBEBEB;
+        outline: none;
+      }
+
+      button {
+        background: #FF69B4;
+        color: #fff;
+        width: 61px;
+        height: 44px;
+        border: none;
+        border-radius: 6px;
+      }
+    }
+
+  }
+}

@@ -675,6 +675,8 @@ body {
 }
 .feed-page .shorts-swiper {
   flex: 1;
+  max-width: 455px;
+  width: 100%;
   min-height: 0;
 }
 .feed-page .shorts-swiper .swiper-slide {
@@ -688,8 +690,8 @@ body {
   --footer-height: 68px;
   --safe-area: env(safe-area-inset-bottom, 0px);
   --chrome-height: calc(var(--header-height) + var(--footer-height) + var(--safe-area));
-  width: min(455px, 100vw - 24px, (100svh - var(--chrome-height)) * 9 / 16);
   aspect-ratio: 9/16;
+  width: min(455px, 100vw - 24px);
   margin-inline: auto;
   background: #2D2D2D;
   padding: 12px;
@@ -703,13 +705,11 @@ body {
 }
 .feed-page .shorts .bg-video {
   position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  left: 0;
-  top: 0;
+  object-fit: contain;
   z-index: -2;
-  object-position: center top;
   border-radius: inherit;
 }
 .feed-page .shorts::before {
@@ -905,6 +905,12 @@ body {
 @media (max-width: 1024px) {
   .feed-page .shorts-swiper .swiper-slide {
     padding-bottom: 0;
+  }
+  .feed-page .shorts-swiper {
+    max-width: 100%;
+  }
+  .feed-page .shorts .bg-video {
+    object-fit: contain;
   }
   .search-page .footer {
     position: fixed;
@@ -1261,6 +1267,27 @@ body {
     width: calc(100% + 1px);
     left: -1px;
   }
+  .feed-page .shorts {
+    width: 100%;
+    max-width: 100% !important;
+    height: 100%;
+    aspect-ratio: unset !important;
+  }
+  .feed-page .shorts {
+    background: #000;
+    padding: 0 !important;
+  }
+  .feed-page .shorts .bottom-actions {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    width: calc(100% - 24px);
+  }
+  .feed-page .shorts .bg-video {
+    object-fit: contain;
+    position: relative;
+    object-position: center;
+  }
 }
 /* ─── ACTION BTN SCALE ANIMATION ─── */
 .action-btn {
@@ -1339,17 +1366,22 @@ body {
   gap: 8px;
 }
 
-@media (max-width: 375px) {
-  .feed-page .shorts {
-    aspect-ratio: 9/15;
-  }
-}
 @media (max-width: 343px) {
   .header {
-    flex-direction: column;
     gap: 3px;
-    align-items: start;
   }
+  .header__logo {
+    width: 147px;
+    height: 36px;
+  }
+}
+.salom {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../images/shorts.png);
+  background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=main.css.map */

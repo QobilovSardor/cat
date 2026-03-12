@@ -914,8 +914,8 @@ body {
   .feed-body .shorts-swiper {
     padding-inline: 20px !important;
     margin-inline: 20px !important;
-    width: calc(100% - 40px) !important;
-    max-width: calc(100% - 40px) !important;
+    width: calc(100% - 80px) !important;
+    max-width: calc(100% - 80px) !important;
   }
   .feed-body #main {
     height: 100%;

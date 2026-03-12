@@ -1139,8 +1139,13 @@ body {
     flex-direction: column;
   }
   .wrapper.feed-page #main {
-    height: calc(100dvh - 68px - 61px);
+    height: calc(100dvh - 68px - 67px);
   }
+  .feed-page .shorts .video-actions .share-options {
+    right: 55px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
   .feed-body {
     overflow: hidden;
     height: 100dvh;
@@ -1151,6 +1156,14 @@ body {
   }
 }
 @media (max-width: 768px) {
+  .feed-body {
+    overflow: hidden;
+    height: 100dvh;
+  }
+  .feed-body .shorts {
+    max-width: fit-content !important;
+    padding-inline: 0 !important;
+  }
   .media-search {
     height: calc(100% - 73px);
   }
